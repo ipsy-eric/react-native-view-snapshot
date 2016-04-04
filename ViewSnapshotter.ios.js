@@ -8,7 +8,8 @@ var {
 var NativeViewSnapshotter = NativeModules.ViewSnapshotter;
 
 var ViewSnapshotter = {
-  saveSnapshotToPath: NativeViewSnapshotter.saveSnapshotToPath
+  saveSnapshotToPath: NativeViewSnapshotter.saveSnapshotToPath,
+  saveFullHeightWebpageSnapshotToPath: NativeViewSnapshotter.saveFullHeightWebpageSnapshotToPath
 };
 
 module.exports = ViewSnapshotter;
