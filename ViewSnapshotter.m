@@ -92,12 +92,10 @@ RCT_EXPORT_METHOD(saveFullHeightWebpageSnapshotToPath:(nonnull NSNumber *)reactT
     UIScrollView* targetScrollView = nil;
     
     for (UIView* subview in view.subviews) {
-        if ([subview isKindOfClass:[RCTWebView class]]) {
-            for (UIView* childView in subview.subviews) {
-                if ([childView isKindOfClass:[UIWebView class]]) {
-                    NSLog(@"Found the target webview: %@", childView);
-                    targetScrollView = [(UIWebView *)childView scrollView];
-                }
+        for (UIView* childView in subview.subviews) {
+            if ([childView isKindOfClass:[UIWebView class]]) {
+                NSLog(@"Found the target webview: %@", childView);
+                targetScrollView = [(UIWebView *)childView scrollView];
             }
         }
     }
